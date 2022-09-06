@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="../../index.html">Главная</a></li>
+        <li><a href="../../copy.html">Галерея</a></li>
+        <li>
+            <a href="#">Блоки</a>
+            <ul class="list">
+                <li><a href="../../block/t_cell/index.html">t_cell</a></li>
+                <li><a href="../../block/in_block/index.html">in_b</a></li>
+                <li class="list_float">
+                    <a href="#">float</a>
+                    <ul>
+                        <li><a href="../../block2/before/index.html">div</a></li>
+                        <li><a href="#">after</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="../../block3/flexbox/index.html">flex</a></li>
+                <li class="list_grid">
+                    <a href="#">grid</a>
+                    <ul>
+                        <li><a href="../../block3/grid_template_columns/index.html">columns</a></li>
+                        <li><a href="../../block3/grid_areas/index.html">areas</a></li>
+                    </ul>
+
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="wrapper">
+        <div class="float">
+            <div class="l_float col-1-3">Lorem ipsum dolor sit amet.</div>
+            <div class="l_float col-1-3">Lorem ipsum dolor sit amet.</div>
+            <div class="l_float col-1-3">Lorem ipsum dolor sit amet.</div>
+            <div class="clear_l"></div>
+        </div>
+
+        <div class="float">
+            <div class="l_float col-2-3">
+                <div class="line-1_5-3">Row 1</div>
+                <div class="line-1_5-3">Row 2</div>
+            </div>
+            <div class="l_float col-1-3">
+                <div class="line-1-3">Row 1</div>
+                <div class="line-1-3">Row 2</div>
+                <div class="line-1-3">Row 3</div>
+            </div>
+            <div class="clear_l"></div>
+        </div>
+
+        <div class="float">
+            <div class="l_float col-1-2">
+                <div class="line-1_5-3">Row</div>
+                <div>
+                    <div class="l_float line-1_5-3 col-1-2">cell</div>
+                    <div class="l_float line-1_5-3 col-1-2">cell</div>
+                </div>
+            </div>
+            <div class="l_float col-1-2 line-3-3">Lorem ipsum dolor sit amet.</div>
+            <div class="clear_l"></div>
+        </div>
+
+        <div class="float">
+            <div class="l_float col-2-3">
+                <div class="line-1-3">Row</div>
+                <div>
+                    <div class="l_float line-2-3 col-1-2">cell</div>
+                    <div class="l_float col-1-2">
+                        <div class="line-1-3">cell</div>
+                        <div class="line-1-3">cell</div>
+                    </div>
+                </div>
+            </div>
+            <div class="l_float col-1-3 line-3-3">Lorem ipsum dolor sit amet.</div>
+            <div class="clear_l"></div>
+        </div>
+    </div>
+</body>
+</html>
