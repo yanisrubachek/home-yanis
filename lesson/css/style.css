@@ -123,7 +123,7 @@ ul ul li+li{
   bottom: 0;
   padding: 0 10px 0;
   opacity: 0;
-  transition: right 0.75s cubic-bezier(0.83, 0.51, 0.82, 0.96), opacity 0.25s ease-in;
+  transition: right 0.75s cubic-bezier(0.94, 0.22, 0.09, 1.51), opacity 0.25s ease-in;
   pointer-events: none;
 }
 
@@ -139,7 +139,7 @@ ul ul li+li{
   top: 0;
   padding: 0 10px 0;
   opacity: 0;
-  transition: left 0.75s cubic-bezier(0.83, 0.51, 0.82, 0.96), opacity 0.25s ease-in;
+  transition: left 0.75s cubic-bezier(0.94, 0.22, 0.09, 1.51), opacity 0.25s ease-in;
   pointer-events: none;
 }
 
