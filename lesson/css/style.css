@@ -101,33 +101,56 @@ ul ul li+li{
   border-top: 1px solid lightgreen;
 }
 
-ul .list{
+.main-menu .block-list{
   position: absolute;
-  top: 100%;
+  top: calc(100% - 10px);
   left: 0;
   padding: 10px 0 0;
-  display: none;
+  opacity: 0;
+  transition: top 0.75s cubic-bezier(0.83, 0.51, 0.82, 0.96), opacity 0.25s ease-in;
+  pointer-events: none;
 }
 
-.list_float ul{
+.main-menu li:hover > .block-list{
+  opacity: 1;
+  top: 100%;
+  pointer-events: all;
+}
+
+.float-menu-item ul {
   position: absolute;
-  right: 100%;
+  right: 120%;
   bottom: 0;
   padding: 0 10px 0;
-  display: none;
+  opacity: 0;
+  transition: right 0.75s cubic-bezier(0.83, 0.51, 0.82, 0.96), opacity 0.25s ease-in;
+  pointer-events: none;
 }
 
-.list_grid ul{
+.float-menu-item:hover ul {
+  right: 100%;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.grid-menu-item ul {
   position: absolute;
-  left: 100%;
+  left: 120%;
   top: 0;
   padding: 0 10px 0;
-  display: none;
+  opacity: 0;
+  transition: left 0.75s cubic-bezier(0.83, 0.51, 0.82, 0.96), opacity 0.25s ease-in;
+  pointer-events: none;
 }
 
-ul li:hover>ul{
-  display: block;
+.grid-menu-item:hover ul {
+  left: 100%;
+  opacity: 1;
+  pointer-events: all;
+
 }
+
+
 
 .main-menu > li > a > .icon {
   background-image: url('../images/sprite-icon-4.jpg');
@@ -158,7 +181,7 @@ ul li:hover>ul{
   background-position: 300px 0;
 }
 
-.main-menu .list > li > a > .icon {
+.main-menu .block-list > li > a > .icon {
   background-image: url('../images/sprite-icon-4.jpg');
   background-size: 400px ;
   min-width: 25px;
@@ -166,37 +189,38 @@ ul li:hover>ul{
   display: block;
 }
 
-.main-menu .list > li > a {
+.main-menu .block-list > li > a {
   display: flex;
 }
 
-.main-menu .list > li:nth-child(3) > a {
+.main-menu .block-list > li:nth-child(3) > a {
   padding-left: 15px;
   width: 175px;
 }
 
-.main-menu .list > li:nth-child(3) > a > .icon {
+.main-menu .block-list > li:nth-child(3) > a > .icon {
   background-position: 250px 0;
   margin-right: 10px;
 }
 
-.main-menu .list > li:nth-child(3):hover > a > .icon {
+.main-menu .block-list > li:nth-child(3):hover > a > .icon {
   background-position: 350px 0;
 }
 
-.main-menu .list > li:nth-child(5) > a {
+.main-menu .block-list > li:nth-child(5) > a {
   padding-right: 15px;
   width: 175px;
 }
 
-.main-menu .list > li:nth-child(5) > a > .icon {
+.main-menu .block-list > li:nth-child(5) > a > .icon {
   background-position: 350px 0;
   margin-left: 10px;
 }
 
-.main-menu .list > li:nth-child(5):hover > a > .icon {
+.main-menu .block-list > li:nth-child(5):hover > a > .icon {
   background-position: 250px 0;
 }
+
 
 h1{
   color: yellowgreen; 
