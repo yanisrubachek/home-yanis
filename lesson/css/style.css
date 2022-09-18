@@ -101,7 +101,7 @@ ul ul li+li{
   border-top: 1px solid lightgreen;
 }
 
-.main-menu .block-list{
+.main-menu .block-list {
   position: absolute;
   top: calc(100% - 10px);
   left: 0;
