@@ -1,0 +1,106 @@
+.form-wrapper {
+    width: 800px;
+    margin: 0 auto;
+    background: orange;
+    padding: 20px;
+}
+
+.form-wrapper  * {
+    box-sizing: border-box;
+}
+
+.form-wrapper .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-wrapper .form .submit-button {
+    padding: 10px;
+    background-color: #ce1211;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-wrapper {
+    background-color: #FFF;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.input-wrapper select,
+.input-wrapper input {
+    width: 100%;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    border-radius: 4px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+}
+
+.input-wrapper select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 40px;
+}
+
+.input-wrapper select::-ms-expand {
+    display: none;
+}
+
+.input-wrapper.input__select:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    display: block;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../images/sprite-icon-4.jpg');
+    background-size: 400px;
+    background-position: 300px 0;
+    pointer-events: none;
+}
+
+input[type="text"]::placeholder {
+    color: #ce1211;
+    font-style: italic;
+}
+
+input[type="text"]:-ms-input-placeholder {
+    color: #ce1211;
+    font-style: italic;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"]:focus::-webkit-outer-spin-button,
+input[type="number"]:hover::-webkit-outer-spin-button,
+input[type="number"]:focus::-webkit-inner-spin-button,
+input[type="number"]:hover::-webkit-inner-spin-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 25px;
+    border-left: 1px solid #bbb;
+    background-image: url('../images/sprite-icon-4.jpg');
+    background-size: 400px 530px;
+    background-position: 200px 0;
+}
