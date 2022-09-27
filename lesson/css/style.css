@@ -239,6 +239,11 @@ ul ul li+li {
 
 }
 
+.grid-menu-item ul > li a,
+.float-menu-item ul > li a {
+  font-family: "Rothek", sans-serif;
+  font-weight: bold;
+}
 
 
 .main-menu>li>a>.icon {
@@ -252,6 +257,7 @@ ul ul li+li {
 
 .main-menu>li>a {
   display: flex;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main-menu>li:nth-child(1)>a>.icon {
@@ -280,6 +286,7 @@ ul ul li+li {
 
 .main-menu .block-list>li>a {
   display: flex;
+  font-family: "Gilroy", sans-serif;
 }
 
 .main-menu .block-list>li:nth-child(3)>a {
