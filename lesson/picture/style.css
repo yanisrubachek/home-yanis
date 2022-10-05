@@ -1,5 +1,6 @@
 .bolt-wrapper,
-.screw-wrapper {
+.screw-wrapper,
+.ship-wpapper {
     position: relative;
     width: 800px;
     height: 300px;
@@ -7,7 +8,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;;
+    margin-bottom: 100px;
+    ;
+}
+
+.ship-wpapper {
+    height: 1000px;
 }
 
 .bolt-wrapper .base {
@@ -32,10 +38,9 @@
     height: 250px;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
-    background: linear-gradient(
-        rgb(124, 124, 124) 0%, rgb(124, 124, 124) 47%,
-        white 47%, white 53%,
-        rgba(124, 124, 124) 53%, rgba(124, 124, 124) 100%);
+    background: linear-gradient(rgb(124, 124, 124) 0%, rgb(124, 124, 124) 47%,
+            white 47%, white 53%,
+            rgba(124, 124, 124) 53%, rgba(124, 124, 124) 100%);
     z-index: -1;
 }
 
@@ -52,5 +57,120 @@
     width: 100%;
     height: 100%;
     transform: rotate(45deg);
-    background-image: radial-gradient(circle, transparent 20%,rgba(124, 124, 124) 20%);
+    background-image: radial-gradient(circle, transparent 20%, rgba(124, 124, 124) 20%);
+}
+
+.ship {
+    position: relative;
+    width: 400px;
+    height: 75px;
+    background: linear-gradient(135deg,
+            rgb(124, 124, 124)50%,
+            rgb(82, 81, 81) 50%, rgb(82, 81, 81) 60%,
+            rgb(124, 124, 124) 60%, rgba(124, 124, 124) 70%,
+            rgb(82, 81, 81) 70%, rgb(82, 81, 81) 80%,
+            rgba(124, 124, 124) 80%, rgba(124, 124, 124) 90%,
+            rgb(82, 81, 81) 90%);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+}
+
+.ship::before,
+.ship::after {
+    position: absolute;
+    content: '';
+}
+
+.ship::before {
+    width: 30%;
+    right: 100%;
+    bottom: 0;
+    border-bottom: 50px solid rgba(124, 124, 124);
+    border-right: 50px solid transparent;
+    border-radius: 20px;
+    transform-origin: 100% 75px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.ship::after {
+    width: 30%;
+    left: 100%;
+    bottom: 0;
+    border-bottom: 50px solid rgba(124, 124, 124);
+    border-left: 50px solid transparent;
+    border-radius: 20px;
+    transform-origin: 0 calc(100% + 25px);
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.ship .shield-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    transform: translate(0,-50%);
+    position: relative;
+    z-index: 10;
+}
+
+.ship .shield-wrapper .shield {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+}
+
+.ship .shield-wrapper .shield.shield_1 {
+    box-shadow: 0px 0px 0px 20px rgba(32, 113, 179, 0.7) inset;
+}
+
+.ship .shield-wrapper .shield.shield_2 {
+    box-shadow: 0px 0px 0px 20px rgba(198, 201, 49, 0.7) inset;
+}
+
+.ship .shield-wrapper .shield.shield_3 {
+    box-shadow: 0px 0px 0px 20px rgba(23, 207, 112, 0.5) inset;
+}
+
+.ship .mast {
+    width: 5px;
+    height: 360px;
+    background: rgba(124, 124, 124);
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%);
+    z-index: 5;
+}
+
+.ship .sail {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    z-index: 5;
+    border-radius: 50%;
+    background: radial-gradient(circle at 0% 100%, rgba(255, 255, 255, 0) 65%,rgb(175, 38, 164) 65%);
+}
+
+.ship .sail.sail_front {
+    transform: translate(-130%,-20%) rotate(45deg);
+}
+
+.ship .sail.sail_back {
+    transform: translate(-130%,-20%) rotate(225deg);
+}
+
+.ship .flag {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-3px,-360px);
+    width: 100px;
+    height: 0;
+    border-top: 40px solid rgb(24, 126, 190);
+    border-bottom: 40px solid rgb(251, 255, 33);
+    border-right: 40px solid transparent;
 }
